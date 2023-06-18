@@ -1,0 +1,500 @@
+@font-face {
+    font-family: 'Better Together Caps';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Better Together Caps'), url('fonts/Better\ Together\ Caps.woff') format('woff');
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+/* Начало navbar */
+
+.logo__title {
+    font-family: 'Better Together Caps';
+    font-style: normal;
+    font-size: 65px;
+    line-height: 65px;
+    color: #FFFFFF;
+    float: left;
+}
+
+nav .logo-search-container {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+nav .logo__title {
+    margin-right: 10px;
+}
+
+nav .search-bar {
+    margin-left: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background: #130C09;
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.search-bar {
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    padding: 0.6rem 1rem;
+}
+
+.search-bar input[type="search"] {
+    background: transparent;
+    width: 20vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+}
+
+nav .button {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.btn_log {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    padding: 0.6rem 2rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #FEF3C7;
+    background-color: #F97316;
+    transition: all 300ms ease;
+
+}
+
+.btn_reg {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    padding: 0.6rem 2rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #FEF3C7;
+    background-color: #130C09;
+    box-shadow: 0 0 0 2px #FB923C;
+    transition: all 300ms ease;
+
+
+}
+
+#cart-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+#cart-icon:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+/* _______________________________________ */
+
+
+
+@media only screen and (max-width: 768px) {
+    /* изменения для экранов, у которых ширина меньше или равна 768px */
+
+nav .container {
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav .logo__title {
+    margin-right: 0;
+    margin-bottom: 1rem;
+}
+
+nav .search-bar input[type="search"] {
+    width: 100%;
+    margin-left: 0;
+}
+
+nav .button {
+    flex-direction: column;
+    gap: 1rem;
+}
+}
+
+@media only screen and (max-width: 480px) {
+    /* изменения для экранов, у которых ширина меньше или равна 480px */
+
+.logo__title {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.search-bar {
+    padding: 0.4rem 0.8rem;
+}
+
+.search-bar input[type="search"] {
+    font-size: 0.8rem;
+}
+
+.btn_log,
+.btn_reg {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+}
+}
+
+/* Конец navbar */
+
+
+
+/* Начало секции home */
+
+/* Home section Start */
+.home {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 0;
+    padding: 100px 8% 120px;
+    margin-top: 100px; /* добавляем отступ сверху, равный высоте навигационного меню (подумать над этим)*/ 
+    background-color: 
+    #E9D8CB;
+}
+
+.home-content {
+    flex: 1 1 400px;
+}
+
+.home .img {
+    flex: 1 1 100px;
+}
+
+.home .img img {
+    width: 80%;
+    /* box-shadow: 0px 15px 12px -10px black;
+    background: orange; */
+}
+
+.home-content h3 {
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.home-content h3 span {
+    color: orange;
+    text-shadow: 0px 1px 1px black;
+}
+
+.home-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.home-content h2 span {
+    color: orange;
+    text-shadow: 0px 1px 1px black;
+}
+
+.home-content p {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+#btn {
+    width: 150px;
+    height: 38px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #F97316;
+    color: #FEF3C7;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#btn:hover {
+    width: 175px;
+}
+
+@media screen and (max-width:1243) {
+    .home {
+        padding: 50px 5% 120px;
+    }
+}
+
+@media (max-width:660px) {
+    .home-content h3 {
+        font-size: 25px;
+    }
+
+    .home-content h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:597px) {
+    .home {
+        text-align: center;
+    }
+}
+
+/* Home section End */
+
+.facility{
+    background-color: #E9D8CB;
+
+}
+.facility .box-container {
+    display: flex;
+    /* Используем flex-контейнер */
+    justify-content: center;
+    /* Выравнивание контента по центру */
+    align-items: center;
+    /* Выравнивание элементов по вертикали */
+    gap: 44px;
+    /* Расстояние между элементами */
+}
+
+
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.facility .box-container .box {
+    width: auto;
+    /* Убираем фиксированную ширину */
+    text-align: center;
+}
+
+
+.facility .box-container .box img {
+    height: 320px;
+    width: 224px;
+
+    margin: 0;
+    /* Убираем отступы */
+    padding: 0;
+    /* Убираем отступы */
+}
+
+
+
+
+
+/* Начало популярные позиции */
+
+.product{
+    background-color: #E9D8CB;
+}
+
+
+.popular-heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 100px;
+}
+
+  
+.product-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
+  
+
+.product-card {
+    width: 306px;
+    height: 434px;
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 2px 7px #8b3d3d;
+    margin: 10px auto;
+    background: #FFFFFF;
+
+}
+
+.badge {
+    position: absolute;
+    left: 28px;
+    top: 28px;
+}
+
+.badge img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    padding: 50px;
+    background: #f0f0f041;
+    border-radius: 24px;
+}
+
+.product-tumb img {
+    width: 196px;
+    height: 196px;
+}
+
+.product-details {
+    padding: 30px;
+    width: 306px;
+    height: 196px;
+}
+.product-cat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.product-catagory {
+    font-family: 'Montserrat', sans-serif;
+
+    padding: 4px 16px;
+    gap: 10px;
+    border-radius: 50%;
+    border: 2px solid #F1E7E3;
+    border-radius: 20px;
+    color: #C69F8D;;
+}
+
+.product-details h4{
+    /* Display 6 */
+    font-family: 'Better Together Caps';
+    text-align: center;
+    color: #78350F;
+    width: 219px;
+    height: 40px;
+    font-weight: 400;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+
+  
+}
+
+.product-price {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+display: flex;
+align-items: center;
+
+/* dark brown/600 */
+
+color: #251813;
+
+}
+
+
+
+
+.product-bottom-details {
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+
+    /* dark brown/600 */
+
+    color: #251813;
+}
+
+.product-links {
+    text-align: right;
+    
+}
+
+
+.product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #FED7AA;
+    transition: 0.3s;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50%;
+    border: 10px solid orange;
+    background-color: orange; /* добавляем оранжевый цвет внутренней области рамки */
+}
+
+
+
+
+  
+
+@media only screen and (max-width: 768px) {
+    .product-card {
+      width: calc(50% - 10px);
+    }
+}
+
+/* Конец популярные позиции */
