@@ -1,6 +1,11 @@
 <?php 
+    include_once('./connections/core.php');
+    include_once('./connections/models.php');
+    include_once('./connections/controllers.php');
+    include_once('./connections/view.php');
+
+
     $dir = __DIR__;
-    $dir . '/public/css/picture/coffe1.png';
     session_start();
     if(!isset($_COOKIE['id_session'])){
         $_SESSION['id_session'] = uniqid();
@@ -8,13 +13,16 @@
     } else{
         $_SESSION['id_session'] = $_COOKIE['id_session'];
     }
-    $url = $_GET['url'] ?? 'main';
+
+    $url = $_GET['url'];
     $segment = explode('/', $url);
     $controll_name = ucfirst(array_shift($segment)) . 'Controller';
-    $controller = new $controll_name();
-    if(isset($controller)){
+    if(class_exists($controll_name)){
+        $controller = new $controll_name();
         $controller->Action();
     } else {
-        
+        $errorController = new ErrorController();
+        $errorController->Action();
     }
+    
 ?>

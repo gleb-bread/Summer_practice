@@ -720,7 +720,10 @@ color: #251813;
 .main__container__error{
     width: 100%;
     height:100%;
-    background-image: url('/public/css/pictures/error_cat.png6');
+    background-image: url('/public/css/pictures/error_cat.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 10%;
 }
 
 .big__text__error{
