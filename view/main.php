@@ -95,98 +95,37 @@
             </div>
             
             <div class="product-row">
+                <?php foreach($products as $product):?>
                 <div class="product-card">
                     <div class="badge">
                         <a href="#">
-                            <img src="./icons/izbranoe.png" alt="Нажми меня">
+                            <img src="/public/css/pictures/izbranoe.png" alt="Нажми меня">
                         </a>
                     </div>
 		            <div class="product-tumb">
-                        <img src="./pictures/capuchino.png" alt="">
+                        <img src="<?= $product['img_product']?>" alt="">
                     </div>
 
                     <div class="product-details">
-                        <div class="product-cat">
-                            <span class="product-catagory">3 типа</span>
-                        </div>
-                        <h4>cappuccino</h4>
+                        <h4><?= $product['name_product']?></h4>
                         <div class="product-bottom-details">
                             <div class="product-price">
-                                <small>350₽</small>
+                                <small><?= $product['price_product']?>₽</small>
                             </div>
 
                             <div class="product-links">
                                 <a href=""><ion-icon name="bag-outline"></ion-icon></a>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
-
-                <div class="product-card">
-                    <div class="badge">
-                        <a href="#">
-                            <img src="./icons/izbranoe.png" alt="Нажми меня">
-                        </a>
-                    </div>
-		            <div class="product-tumb">
-                        <img src="./pictures/espresso.png" alt="">
-                    </div>
-
-                    <div class="product-details">
-                        <div class="product-cat">
-                            <span class="product-catagory">3 типа</span>
-                        </div>
-                        <h4>espresso</h4>
-                        <div class="product-bottom-details">
-                            <div class="product-price">
-                                <small>220₽</small>
-                            </div>
-
-                            <div class="product-links">
-                                <a href=""><ion-icon name="bag-outline"></ion-icon></a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="badge">
-                        <a href="#">
-                            <img src="./icons/izbranoe.png" alt="Нажми меня">
-                        </a>
-                    </div>
-		            <div class="product-tumb">
-                        <img src="./pictures/milkshake.png" alt="">
-                    </div>
-
-                    <div class="product-details">
-                        <div class="product-cat">
-                            <span class="product-catagory">3 типа</span>
-                        </div>
-                        <h4>Milk shake</h4>
-                        <div class="product-bottom-details">
-                            <div class="product-price">
-                                <small>450₽</small>
-                            </div>
-
-                            <div class="product-links">
-                                <a href=""><ion-icon name="bag-outline"></ion-icon></a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
+                <?endforeach;?>
             </div>
 
 
             <!-- ______________________ -->
 
-            <div class="product-row">
+            <!-- <div class="product-row">
                 <div class="product-card">
                     <div class="badge">
                         <a href="#">
@@ -273,7 +212,7 @@
                 </div>
 
 
-            </div>
+            </div> -->
         </div>
     </section>
 <!-- Популярные позиции конец -->
