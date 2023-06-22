@@ -14,6 +14,8 @@
     if(!isset($_COOKIE['id_session'])){
         $_SESSION['id_session'] = uniqid();
         setcookie('id_session', $_SESSION['id_session'], 0, '/');
+        $clientInit = new ClientModel();
+        $clientInit->initClientSession($_COOKIE['id_session']);
     } else{
         $_SESSION['id_session'] = $_COOKIE['id_session'];
     }

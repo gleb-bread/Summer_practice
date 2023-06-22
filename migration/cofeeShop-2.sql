@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:8889
--- Время создания: Июн 22 2023 г., 20:54
+-- Время создания: Июн 22 2023 г., 21:47
 -- Версия сервера: 5.7.39
 -- Версия PHP: 7.4.33
 
@@ -24,14 +24,55 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `cart`
+--
+
+CREATE TABLE `cart` (
+  `id_client` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL,
+  `count_product` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `clients`
 --
 
 CREATE TABLE `clients` (
   `id_session` varchar(255) NOT NULL,
   `id_client` int(255) NOT NULL,
-  `login_client` varchar(255) NOT NULL,
-  `password_client` varchar(255) NOT NULL
+  `login_client` varchar(255) DEFAULT NULL,
+  `password_client` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `clients`
+--
+
+INSERT INTO `clients` (`id_session`, `id_client`, `login_client`, `password_client`) VALUES
+('6490c5edbf216', 1, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `count_cart`
+--
+
+CREATE TABLE `count_cart` (
+  `id_client` int(255) NOT NULL,
+  `count_product` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `favourites`
+--
+
+CREATE TABLE `favourites` (
+  `id_client` int(255) NOT NULL,
+  `id_product` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -110,13 +151,13 @@ ALTER TABLE `product_categories`
 -- AUTO_INCREMENT для таблицы `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id_client` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_client` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_product` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_product` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `product_categories`
