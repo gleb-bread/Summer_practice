@@ -22,4 +22,14 @@
                 return $query->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {echo $e->getMessage();}
         }
+
+        public function getProductsWithLimitPeriod($Startlimit, $EndLimit){
+            try {
+                $query = $this->db->query("
+                SELECT * 
+                FROM `product` 
+                LIMIT $Startlimit,$EndLimit");
+                return $query->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {echo $e->getMessage();}
+        }
     }

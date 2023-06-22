@@ -23,7 +23,7 @@
         </div>
         <div class="button">
             <a href="#">
-                <img id="cart-icon" src="./icons/shopping_cart.png" alt="корзина"">
+                <img id="cart-icon" src="/public/css/pictures/shopping_cart.png" alt="корзина"">
             </a>
             <button class="btn_log">Войти</button>
             <button class="btn_reg">Зарегистрироваться</button>
@@ -43,7 +43,7 @@
             <button id="btn">Order Now</button>
         </div>
         <div class="img">
-            <img src="./pictures/coffee_mas.png" alt="">
+            <img src="/public/css/pictures/coffee_mas.png" alt="">
         </div>
     </section>
 <!-- Home Section End -->
@@ -57,25 +57,25 @@
 
         <div class="box-container">
             <div class="box">
-                <img src="./pictures/oborudovanie.png" alt="">
+                <img src="/public/css/pictures/oborudovanie.png" alt="">
             </div>
 
             <div class="box">
-                <img src="./pictures/coffee_var.png" alt="">
+                <img src="/public/css/pictures/coffee_var.png" alt="">
             </div>
 
             <div class="box">
-                <img src="./pictures/coffee_out.png" alt="">
-            </div>
-
-
-            <div class="box">
-                <img src="./pictures/candies.png" alt="">
+                <img src="/public/css/pictures/coffee_out.png" alt="">
             </div>
 
 
             <div class="box">
-                <img src="./pictures/beans.png" alt="">
+                <img src="/public/css/pictures/candies.png" alt="">
+            </div>
+
+
+            <div class="box">
+                <img src="/public/css/pictures/beans.png" alt="">
             </div>
         </div>
         
@@ -95,7 +95,34 @@
             </div>
             
             <div class="product-row">
-                <?php foreach($products as $product):?>
+                <?php foreach($products1 as $product):?>
+                <div class="product-card">
+                    <div class="badge">
+                        <a href="#">
+                            <img src="/public/css/pictures/izbranoe.png" alt="Нажми меня">
+                        </a>
+                    </div>
+		            <div class="product-tumb">
+                        <img src="<?= $product['img_product']?>" alt="">
+                    </div>
+
+                    <div class="product-details">
+                        <h4><?= $product['name_product']?></h4>
+                        <div class="product-bottom-details">
+                            <div class="product-price">
+                                <small><?= $product['price_product']?>₽</small>
+                            </div>
+
+                            <div class="product-links">
+                                <a href=""><ion-icon name="bag-outline"></ion-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach;?>
+            </div>
+            <div class="product-row">
+                <?php foreach($products2 as $product):?>
                 <div class="product-card">
                     <div class="badge">
                         <a href="#">
@@ -227,13 +254,13 @@
         <div class="slider">
             <div class="list">
                 <div class="item"> 
-                    <img src="./pictures/sales1.png" alt="">
+                    <img src="/public/css/pictures/sales1.png" alt="">
                 </div>
                 <div class="item">
-                    <img src="./pictures/sales2.png" alt="">
+                    <img src="/public/css/pictures/sales2.png" alt="">
                 </div>
                 <div class="item">
-                    <img src="./pictures/sales3.png" alt="">
+                    <img src="/public/css/pictures/sales3.png" alt="">
                 </div>
             </div>
             <div class="buttons">

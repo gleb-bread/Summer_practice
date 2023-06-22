@@ -10,10 +10,12 @@ class MainController{
     }
 
     public function Action(){
-        $product = $this->productModel->getAllProducts();
+        $product1 = $this->productModel->getProductsWithLimitPeriod(1,3);
+        $product2 = $this->productModel->getProductsWithLimitPeriod(3,6);
         $view = './view/main.php';
         $data = array(
-            'products' => $product,
+            'products1' => $product1,
+            'products2' => $product2,
         );
         $this->html->render($data, $view);
     }
