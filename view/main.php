@@ -1,4 +1,4 @@
-    <?php ?>
+
     <!-- <nav>
         <div class="container">
             <p class="logo__title">Fragrante</p>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <?endforeach;?>
+                <?php endforeach;?>
             </div>
 
 
@@ -249,4 +249,4 @@
         </div>
     </section>
 <!-- Конец слайдера -->
-<?php ?>
+

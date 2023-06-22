@@ -9,7 +9,7 @@
             include_once('./init.php');
 
             try {
-                $dsn ="mysql:$host_name;dbname=$data_base_name";
+                $dsn ="mysql:host=$host_name;dbname=$data_base_name";
                 $username = $user_name;
                 $password = $user_password;
 

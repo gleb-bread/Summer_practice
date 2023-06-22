@@ -8,7 +8,7 @@
 
         public function getAllProducts(){
             try {
-                $query = $this->db->query("SELECT * FROM `product`");
+                $query = $this->db->query("SELECT * FROM product");
                 return $query->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {echo $e->getMessage();}
         }
