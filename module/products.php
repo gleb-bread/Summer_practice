@@ -32,4 +32,27 @@
                 return $query->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {echo $e->getMessage();}
         }
+
+        public function addToFavorietes($clientId, $productId){
+            try{
+                $command = $this->db->prepare(`
+                    DELETE FROM favourites
+                    WHERE id_client=:clientId`);
+                $command->bindCommand(':clientId', $clientId);
+                if ($command->execute()){
+                    return array('result' => true, 'action' => 'delete');
+                } else {
+                    $command = $this->db->prepare(`
+                    INSERT INTO favourites (id_client, id_product)
+                    VALUES (:clientId, :productId)`);
+                    $command->bindCommand(':clientId', $clientId);
+                    $command->bindCommand(':clientId', $productId);
+                    if ($command->execute()){
+                        return array('result' => true, 'action' => 'update');
+                    }
+                }
+                return false;
+                
+            } catch (PDOException $e) {echo $e->getMessage();}
+        }
     }
