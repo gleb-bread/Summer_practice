@@ -38,15 +38,15 @@
                 $command = $this->db->prepare(`
                     DELETE FROM favourites
                     WHERE id_client=:clientId`);
-                $command->bindCommand(':clientId', $clientId);
+                $command->bindParam(':clientId', $clientId);
                 if ($command->execute()){
                     return array('result' => true, 'action' => 'delete');
                 } else {
                     $command = $this->db->prepare(`
                     INSERT INTO favourites (id_client, id_product)
                     VALUES (:clientId, :productId)`);
-                    $command->bindCommand(':clientId', $clientId);
-                    $command->bindCommand(':clientId', $productId);
+                    $command->bindParam(':clientId', $clientId);
+                    $command->bindParam(':clientId', $productId);
                     if ($command->execute()){
                         return array('result' => true, 'action' => 'update');
                     }
