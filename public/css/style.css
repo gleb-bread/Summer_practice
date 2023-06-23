@@ -715,3 +715,20 @@ color: #251813;
 
 
 /* Конец футера */
+
+/* Страница ошибки*/
+.main__container__error{
+    width: 100%;
+    height:100%;
+    background-image: url('/public/css/pictures/error_cat.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+}
+
+.big__text__error{
+    font-size: 45px;
+    color: rgb(255,100,100);
+    font-size: 'Montserrat';
+}
+/* Конец страницы ошибки*/

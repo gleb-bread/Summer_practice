@@ -1,48 +1,3 @@
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop</title>
-    <link rel="shortcut icon" type="image" href="./icons/coffee-cup.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- шрифты -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Tilt+Prism&display=swap" rel="stylesheet">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Indie+Flower&family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
-
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-
-    <script src="https://kit.fontawesome.com/daeb3e08ea.js" crossorigin="anonymous"></script>
-                
-
-    <!-- bootstrap links -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- bootstrap links -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</head>
-<body>
 
     <!-- <nav>
         <div class="container">
@@ -68,7 +23,7 @@
         </div>
         <div class="button">
             <a href="#">
-                <img id="cart-icon" src="./icons/shopping_cart.png" alt="корзина"">
+                <img id="cart-icon" src="/public/css/pictures/shopping_cart.png" alt="корзина"">
             </a>
             <button class="btn_log">Войти</button>
             <button class="btn_reg">Зарегистрироваться</button>
@@ -88,7 +43,7 @@
             <button id="btn">Order Now</button>
         </div>
         <div class="img">
-            <img src="./pictures/coffee_mas.png" alt="">
+            <img src="/public/css/pictures/coffee_mas.png" alt="">
         </div>
     </section>
 <!-- Home Section End -->
@@ -102,25 +57,25 @@
 
         <div class="box-container">
             <div class="box">
-                <img src="./pictures/oborudovanie.png" alt="">
+                <img src="/public/css/pictures/oborudovanie.png" alt="">
             </div>
 
             <div class="box">
-                <img src="./pictures/coffee_var.png" alt="">
+                <img src="/public/css/pictures/coffee_var.png" alt="">
             </div>
 
             <div class="box">
-                <img src="./pictures/coffee_out.png" alt="">
-            </div>
-
-
-            <div class="box">
-                <img src="./pictures/candies.png" alt="">
+                <img src="/public/css/pictures/coffee_out.png" alt="">
             </div>
 
 
             <div class="box">
-                <img src="./pictures/beans.png" alt="">
+                <img src="/public/css/pictures/candies.png" alt="">
+            </div>
+
+
+            <div class="box">
+                <img src="/public/css/pictures/beans.png" alt="">
             </div>
         </div>
         
@@ -140,98 +95,64 @@
             </div>
             
             <div class="product-row">
+                <?php foreach($products1 as $product):?>
                 <div class="product-card">
                     <div class="badge">
                         <a href="#">
-                            <img src="./icons/izbranoe.png" alt="Нажми меня">
+                            <img src="/public/css/pictures/izbranoe.png" alt="Нажми меня">
                         </a>
                     </div>
 		            <div class="product-tumb">
-                        <img src="./pictures/capuchino.png" alt="">
+                        <img src="<?= $product['img_product']?>" alt="">
                     </div>
 
                     <div class="product-details">
-                        <div class="product-cat">
-                            <span class="product-catagory">3 типа</span>
-                        </div>
-                        <h4>cappuccino</h4>
+                        <h4><?= $product['name_product']?></h4>
                         <div class="product-bottom-details">
                             <div class="product-price">
-                                <small>350₽</small>
+                                <small><?= $product['price_product']?>₽</small>
                             </div>
 
                             <div class="product-links">
                                 <a href=""><ion-icon name="bag-outline"></ion-icon></a>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
-
+                <?php endforeach;?>
+            </div>
+            <div class="product-row">
+                <?php foreach($products2 as $product):?>
                 <div class="product-card">
                     <div class="badge">
                         <a href="#">
-                            <img src="./icons/izbranoe.png" alt="Нажми меня">
+                            <img src="/public/css/pictures/izbranoe.png" alt="Нажми меня">
                         </a>
                     </div>
 		            <div class="product-tumb">
-                        <img src="./pictures/espresso.png" alt="">
+                        <img src="<?= $product['img_product']?>" alt="">
                     </div>
 
                     <div class="product-details">
-                        <div class="product-cat">
-                            <span class="product-catagory">3 типа</span>
-                        </div>
-                        <h4>espresso</h4>
+                        <h4><?= $product['name_product']?></h4>
                         <div class="product-bottom-details">
                             <div class="product-price">
-                                <small>220₽</small>
+                                <small><?= $product['price_product']?>₽</small>
                             </div>
 
                             <div class="product-links">
                                 <a href=""><ion-icon name="bag-outline"></ion-icon></a>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
-                <div class="product-card">
-                    <div class="badge">
-                        <a href="#">
-                            <img src="./icons/izbranoe.png" alt="Нажми меня">
-                        </a>
-                    </div>
-		            <div class="product-tumb">
-                        <img src="./pictures/milkshake.png" alt="">
-                    </div>
-
-                    <div class="product-details">
-                        <div class="product-cat">
-                            <span class="product-catagory">3 типа</span>
-                        </div>
-                        <h4>Milk shake</h4>
-                        <div class="product-bottom-details">
-                            <div class="product-price">
-                                <small>450₽</small>
-                            </div>
-
-                            <div class="product-links">
-                                <a href=""><ion-icon name="bag-outline"></ion-icon></a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
+                <?php endforeach;?>
             </div>
 
 
             <!-- ______________________ -->
 
-            <div class="product-row">
+            <!-- <div class="product-row">
                 <div class="product-card">
                     <div class="badge">
                         <a href="#">
@@ -318,7 +239,7 @@
                 </div>
 
 
-            </div>
+            </div> -->
         </div>
     </section>
 <!-- Популярные позиции конец -->
@@ -332,14 +253,14 @@
         </div>
         <div class="slider">
             <div class="list">
-                <div class="item">
-                    <img src="./pictures/sales1.png" alt="">
+                <div class="item"> 
+                    <img src="/public/css/pictures/sales1.png" alt="">
                 </div>
                 <div class="item">
-                    <img src="./pictures/sales2.png" alt="">
+                    <img src="/public/css/pictures/sales2.png" alt="">
                 </div>
                 <div class="item">
-                    <img src="./pictures/sales3.png" alt="">
+                    <img src="/public/css/pictures/sales3.png" alt="">
                 </div>
             </div>
             <div class="buttons">
@@ -356,40 +277,3 @@
     </section>
 <!-- Конец слайдера -->
 
-
-<!-- Начало футера -->
-    <div class="footer">
-        <div class="contain">
-        <div class="col">
-        <h1>Навигация</h1>
-        <ul>
-            <li>Главная</li>
-            <li>Меню</li>
-            <li>Помощь</li>
-        </ul>
-        </div>
-        <div class="col">
-        <h1>Контакты</h1>
-        <ul>
-            <li>Contact us</li>
-            <li>Web chat</li>
-            <li>Open ticket</li>
-        </ul>
-        </div>
-        <div class="col social">
-        <h1>Соцсети</h1>
-        <ul>
-            <li><i class="fab fa-telegram" style="font-size: 32px;"></i></li>
-            <li><i class="fa-brands fa-vk" style="font-size: 32px;"></i></li>
-            <li><i class="fa-brands fa-youtube" style="font-size: 32px;"></i></li>
-        </ul>
-        </div>
-    <div class="clearfix"></div>
-    </div>
-    </div>
-
-<!-- Конец футера -->
-
-    <script src="app.js"></script>
-</body>
-</html>
